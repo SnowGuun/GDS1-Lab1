@@ -13,6 +13,7 @@ public class PlayerCollision : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audioManager = AudioManager.instance;
     }
    private void OnCollisionEnter2D(Collision2D collisionInfo) 
    {
@@ -37,7 +38,9 @@ public class PlayerCollision : MonoBehaviour
        }
        else if (other.gameObject.CompareTag("Hospital")) 
        {
+        soldierManager.soldierTreated += soldierManager.soldierCount;
         soldierManager.resetCounter();
+        
 
 
        }
