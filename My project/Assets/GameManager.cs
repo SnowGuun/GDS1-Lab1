@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            restart();
+        }
     }
 
     public void gameOver()
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public void restart()
     {
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
