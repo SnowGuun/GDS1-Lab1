@@ -11,6 +11,9 @@ public class SoldierManager : MonoBehaviour
     public TextMeshProUGUI soldierCountText;
 
     // Update is called once per frame
+    public void resetCounter(){
+        soldierCount =0;
+    }
     void Update()
     {
         soldierCountText.text = "Soldier Rescued: " + soldierCount.ToString() + "/3"; 
@@ -19,5 +22,10 @@ public class SoldierManager : MonoBehaviour
             soldierCountText.text = "Helicopter at MAX CAPACITY!";
 
         }
+        else if (soldierCount ==0) {
+        soldierCountText.text = "Soldier Rescued: " + soldierCount.ToString() + "/3"; 
+
+        }
     }
+
 }

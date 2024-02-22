@@ -26,7 +26,6 @@ public class PlayerCollision : MonoBehaviour
             
         }
    }
-   
    void OnTriggerEnter2D(Collider2D other)
    {
        if (other.gameObject.CompareTag("Soldier")  && soldierManager.soldierCount < 3)
@@ -36,6 +35,13 @@ public class PlayerCollision : MonoBehaviour
         soldierManager.soldierCount++;
         Debug.Log("Soldier collected!");
        }
+       else if (other.gameObject.CompareTag("Hospital")) 
+       {
+        soldierManager.resetCounter();
+
+
+       }
+       
    }
 
    
