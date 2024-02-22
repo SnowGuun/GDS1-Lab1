@@ -7,7 +7,9 @@ using UnityEngine;
 public class SoldierManager : MonoBehaviour
 {
     public int soldierCount;
+    public int soldierTreated;
     public PlayerCollision playerCollision;
+    public GameManager gameManager;
     public TextMeshProUGUI soldierCountText;
 
     // Update is called once per frame
@@ -25,6 +27,10 @@ public class SoldierManager : MonoBehaviour
         else if (soldierCount ==0) {
         soldierCountText.text = "Soldier Rescued: " + soldierCount.ToString() + "/3"; 
 
+        }
+
+        if (soldierTreated >= 4){
+            gameManager.youWin();
         }
     }
 
