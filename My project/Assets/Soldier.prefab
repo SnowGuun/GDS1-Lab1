@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 654698607196974217}
   - component: {fileID: 4929829921413099204}
   - component: {fileID: 1368933858270349221}
+  - component: {fileID: 1760029013798254819}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Soldier
@@ -130,3 +131,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1760029013798254819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3466954317191715113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5e7c351ed0a014e9e113797a89a128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  range: 0.5
+  maxDistance: 3

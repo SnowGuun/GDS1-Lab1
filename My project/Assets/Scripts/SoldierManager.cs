@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+
 
 
 public class SoldierManager : MonoBehaviour
@@ -12,15 +14,13 @@ public class SoldierManager : MonoBehaviour
     public GameManager gameManager;
     public TextMeshProUGUI soldierCountText;
     public TextMeshProUGUI soldierInHospitalText;
-
-
-    // Update is called once per frame
+    
     public void resetCounter(){
         soldierCount =0;
     }
     void Update()
     {
-        soldierCountText.text = "Soldier Rescued: " + soldierCount.ToString() + "/3";
+        soldierCountText.text = "Soldier in Helicopter: " + soldierCount.ToString() + "/3";
         soldierInHospitalText.text = "Soldier in Hospital: " + soldierTreated.ToString();
 
 
@@ -30,13 +30,16 @@ public class SoldierManager : MonoBehaviour
 
         }
         else if (soldierCount ==0) {
-        soldierCountText.text = "Soldier Rescued: " + soldierCount.ToString() + "/3"; 
+        soldierCountText.text = "Soldier in Helicopter: " + soldierCount.ToString() + "/3"; 
 
         }
 
         if (soldierTreated >= 4){
             gameManager.youWin();
+            GameManager.isGameOver = false;
         }
+
+
     }
 
 }
