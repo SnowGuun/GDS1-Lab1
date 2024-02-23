@@ -31,6 +31,10 @@ public class GameManager : MonoBehaviour
         {
             restart();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            quit();
+        }
     }
     private void startGame() 
     {
@@ -56,5 +60,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
 
+    }
+    public void quit()
+    {
+        Application.Quit();
+        #if UNITY_EDITOR
+        Debug.Log("Quit game requested. This works only in a built version of the game.");
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
