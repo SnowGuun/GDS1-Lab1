@@ -3038,6 +3038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1228019115}
   startGameUI: {fileID: 1134621202}
+  audioManager: {fileID: 624722172}
   youWinUI: {fileID: 1477522787}
 --- !u!4 &1987311171
 Transform:
