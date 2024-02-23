@@ -1,5 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
-using UnityEditor.Callbacks;
 using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
