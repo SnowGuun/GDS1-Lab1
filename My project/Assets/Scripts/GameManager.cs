@@ -8,14 +8,14 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gameOverUI;
     public GameObject startGameUI;
-    
-
+    public AudioManager audioManager;
     public GameObject youWinUI;
     public static bool isGameOver = false;
     public static bool isGameStart= false;
 
     void Start()
     {
+        AudioManager.instance.Play("Theme");
         isGameStart = false; // Ensure game doesn't start immediately
         Time.timeScale = 0; // Pause the game
         startGameUI.SetActive(true); // Show the start screen

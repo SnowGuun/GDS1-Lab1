@@ -17,6 +17,8 @@ public class PlayerCollision : MonoBehaviour
    {
         if (collisionInfo.collider.tag == "Obstacle" & !isCollide)
         {
+            audioManager.Stop("Theme");
+            audioManager.Play("GameOver");
             isCollide = true;
             movement.enabled = false;
             rb.isKinematic = false;
@@ -36,6 +38,7 @@ public class PlayerCollision : MonoBehaviour
        }
        else if (other.gameObject.CompareTag("Hospital")) 
        {
+        audioManager.Play("Drop");
         soldierManager.soldierTreated += soldierManager.soldierCount;
         soldierManager.resetCounter();
         
